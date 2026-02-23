@@ -1,0 +1,432 @@
+```html
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steve Nancy Enyindiya | DevOps & Technical Operations</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Slate 900 */
+            color: #e2e8f0; /* Slate 200 */
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #6366f1, #22d3ee);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.4);
+            border-color: #6366f1;
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-indigo-500 selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0 font-bold text-xl tracking-tighter text-white">
+                    STEVE<span class="text-indigo-500">.DEV</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="hover:text-cyan-400 transition-colors px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="#skills" class="hover:text-cyan-400 transition-colors px-3 py-2 rounded-md text-sm font-medium">Tech Stack</a>
+                        <a href="#experience" class="hover:text-cyan-400 transition-colors px-3 py-2 rounded-md text-sm font-medium">Experience</a>
+                        <a href="#certs" class="hover:text-cyan-400 transition-colors px-3 py-2 rounded-md text-sm font-medium">Education</a>
+                        <a href="#contact" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-full text-sm font-medium transition-all shadow-lg shadow-indigo-500/30">Hire Me</a>
+                    </div>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="inline-flex items-center justify-center p-2 rounded-md text-slate-400 hover:text-white hover:bg-slate-800 focus:outline-none">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden bg-slate-900 border-b border-slate-800" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="text-slate-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="#skills" class="text-slate-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Tech Stack</a>
+                <a href="#experience" class="text-slate-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Experience</a>
+                <a href="#contact" class="text-indigo-400 block px-3 py-2 rounded-md text-base font-medium">Hire Me</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-600/20 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-flex items-center px-3 py-1 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-300 text-sm font-medium mb-6 animate-fade-in-up">
+                <span class="flex h-2 w-2 rounded-full bg-cyan-400 mr-2"></span>
+                Available for Remote Roles
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6">
+                Steve Nancy <span class="gradient-text">Enyindiya</span>
+            </h1>
+            <h2 class="text-xl md:text-2xl text-slate-400 mb-8 max-w-3xl mx-auto">
+                Technical Operations & DevOps Engineer <br>
+                <span class="text-cyan-400">Bridging clinical-operational expertise with cloud infrastructure.</span>
+            </h2>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mb-12">
+                <a href="#contact" class="px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-semibold transition-all shadow-lg shadow-indigo-500/25 flex items-center justify-center gap-2 group">
+                    Hire Me <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+                <a href="/mnt/kimi/upload/Mi cv.pdf" download class="px-8 py-4 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white rounded-lg font-semibold transition-all flex items-center justify-center gap-2">
+                    <i data-lucide="download" class="w-4 h-4"></i> Download CV
+                </a>
+            </div>
+            
+            <!-- Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mt-12 border-t border-slate-800 pt-8">
+                <div class="p-4">
+                    <div class="text-3xl font-bold text-white">3+</div>
+                    <div class="text-sm text-slate-400">Years Experience</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-3xl font-bold text-indigo-400">100+</div>
+                    <div class="text-sm text-slate-400">Global Clients</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-3xl font-bold text-cyan-400">98%</div>
+                    <div class="text-sm text-slate-400">On-Time Delivery</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-3xl font-bold text-white">$2M+</div>
+                    <div class="text-sm text-slate-400">Revenue Impact</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section id="skills" class="py-24 bg-slate-900 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Core <span class="text-indigo-500">Competencies</span></h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Technical toolkit honed through DevOps scholarships and real-world operational management.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700 card-hover group">
+                    <div class="w-12 h-12 bg-indigo-500/20 rounded-lg flex items-center justify-center mb-4 text-indigo-400 group-hover:text-white group-hover:bg-indigo-500 transition-colors">
+                        <i data-lucide="terminal" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Linux & Bash</h3>
+                    <p class="text-slate-400 text-sm">System administration, shell scripting, and automation workflows for robust server management.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700 card-hover group">
+                    <div class="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4 text-cyan-400 group-hover:text-white group-hover:bg-cyan-500 transition-colors">
+                        <i data-lucide="container" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Docker & CI/CD</h3>
+                    <p class="text-slate-400 text-sm">Containerization, automated deployment pipelines, and version control with Git.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700 card-hover group">
+                    <div class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4 text-purple-400 group-hover:text-white group-hover:bg-purple-500 transition-colors">
+                        <i data-lucide="cloud" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">AWS Cloud</h3>
+                    <p class="text-slate-400 text-sm">Cloud infrastructure management, deployment, and scalable architecture solutions.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700 card-hover group">
+                    <div class="w-12 h-12 bg-emerald-500/20 rounded-lg flex items-center justify-center mb-4 text-emerald-400 group-hover:text-white group-hover:bg-emerald-500 transition-colors">
+                        <i data-lucide="database" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">SQL & Data Analysis</h3>
+                    <p class="text-slate-400 text-sm">Complex queries, data transformation, and reporting pipelines for informed decision making.</p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700 card-hover group">
+                    <div class="w-12 h-12 bg-rose-500/20 rounded-lg flex items-center justify-center mb-4 text-rose-400 group-hover:text-white group-hover:bg-rose-500 transition-colors">
+                        <i data-lucide="shield-check" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">HIPAA & Security</h3>
+                    <p class="text-slate-400 text-sm">Compliance-aware environments, risk management, and patient data security protocols.</p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700 card-hover group">
+                    <div class="w-12 h-12 bg-amber-500/20 rounded-lg flex items-center justify-center mb-4 text-amber-400 group-hover:text-white group-hover:bg-amber-500 transition-colors">
+                        <i data-lucide="git-pull-request" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Agile & Product</h3>
+                    <p class="text-slate-400 text-sm">Scrum methodologies, UX design principles, and technical operations management.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section id="experience" class="py-24 bg-slate-950">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Professional <span class="text-cyan-400">Experience</span></h2>
+                <p class="text-slate-400">A track record of operational excellence and technical impact.</p>
+            </div>
+
+            <div class="relative">
+                <!-- Vertical Line -->
+                <div class="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 h-full w-0.5 bg-slate-800"></div>
+
+                <!-- Item 1 -->
+                <div class="relative mb-12 md:mb-24">
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="flex-1 md:text-right md:pr-12 order-2 md:order-1 mt-4 md:mt-0">
+                            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 shadow-xl hover:border-indigo-500/50 transition-colors">
+                                <h3 class="text-xl font-bold text-white">Independent Technical Operations Consultant</h3>
+                                <span class="text-indigo-400 text-sm font-semibold">Self-Directed Consultancy | 2021 - Present</span>
+                                <ul class="mt-4 space-y-2 text-slate-400 text-sm text-left md:text-right">
+                                    <li class="flex md:flex-row-reverse items-start gap-2">
+                                        <span>Managed full-cycle operations for <strong class="text-white">100+ global clients</strong>.</span>
+                                        <i data-lucide="check" class="w-4 h-4 text-indigo-500 mt-0.5"></i>
+                                    </li>
+                                    <li class="flex md:flex-row-reverse items-start gap-2">
+                                        <span>Maintained <strong class="text-cyan-400">98% on-time delivery</strong> & 95% retention.</span>
+                                        <i data-lucide="check" class="w-4 h-4 text-indigo-500 mt-0.5"></i>
+                                    </li>
+                                    <li class="flex md:flex-row-reverse items-start gap-2">
+                                        <span>Drove <strong class="text-white">$2M+ client revenue impact</strong> via growth strategy.</span>
+                                        <i data-lucide="check" class="w-4 h-4 text-indigo-500 mt-0.5"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-4 h-4 bg-indigo-500 rounded-full border-4 border-slate-900 z-10 order-1 md:order-2 shadow-[0_0_15px_rgba(99,102,241,0.6)]"></div>
+                        <div class="flex-1 md:pl-12 order-3 hidden md:block"></div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="relative mb-12 md:mb-24">
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="flex-1 md:pr-12 order-2 md:order-1 hidden md:block"></div>
+                        <div class="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-4 h-4 bg-cyan-500 rounded-full border-4 border-slate-900 z-10 order-1 md:order-2 shadow-[0_0_15px_rgba(34,211,238,0.6)]"></div>
+                        <div class="flex-1 md:pl-12 order-2 md:order-3 mt-4 md:mt-0">
+                            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 shadow-xl hover:border-cyan-500/50 transition-colors">
+                                <h3 class="text-xl font-bold text-white">Clinical Operations & Compliance Assistant</h3>
+                                <span class="text-cyan-400 text-sm font-semibold">Ejire Hospital | 2023 - 2024</span>
+                                <ul class="mt-4 space-y-2 text-slate-400 text-sm">
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-4 h-4 text-cyan-500 mt-0.5"></i>
+                                        <span>Managed patient data workflows in <strong class="text-white">HIPAA-aware</strong> environments.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-4 h-4 text-cyan-500 mt-0.5"></i>
+                                        <span>Ensured 100% documentation accuracy across 200+ weekly records.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i data-lucide="check" class="w-4 h-4 text-cyan-500 mt-0.5"></i>
+                                        <span>Identified compliance gaps contributing to audit readiness.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="relative">
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="flex-1 md:text-right md:pr-12 order-2 md:order-1 mt-4 md:mt-0">
+                            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 shadow-xl hover:border-indigo-500/50 transition-colors">
+                                <h3 class="text-xl font-bold text-white">Educational Communications Coordinator</h3>
+                                <span class="text-indigo-400 text-sm font-semibold">Commyville Learning Centre | 2022 - 2023</span>
+                                <ul class="mt-4 space-y-2 text-slate-400 text-sm text-left md:text-right">
+                                    <li class="flex md:flex-row-reverse items-start gap-2">
+                                        <span>Designed structured educational programs for 30+ students.</span>
+                                        <i data-lucide="check" class="w-4 h-4 text-indigo-500 mt-0.5"></i>
+                                    </li>
+                                    <li class="flex md:flex-row-reverse items-start gap-2">
+                                        <span>Reduced stakeholder escalations by 20% via communication materials.</span>
+                                        <i data-lucide="check" class="w-4 h-4 text-indigo-500 mt-0.5"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-4 h-4 bg-slate-600 rounded-full border-4 border-slate-900 z-10 order-1 md:order-2"></div>
+                        <div class="flex-1 md:pl-12 order-3 hidden md:block"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certs -->
+    <section id="certs" class="py-24 bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+                <!-- Education -->
+                <div>
+                    <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+                        <i data-lucide="graduation-cap" class="text-indigo-500"></i> Education
+                    </h2>
+                    <div class="space-y-6">
+                        <div class="bg-slate-800 p-6 rounded-lg border-l-4 border-indigo-500">
+                            <h3 class="text-lg font-bold text-white">A-Levels: Biology, Chemistry & Physics</h3>
+                            <p class="text-indigo-400">Canadian Gateway International College</p>
+                            <p class="text-slate-400 text-sm mt-1">Science Distinction | SAT Score: 1200</p>
+                            <div class="mt-2 inline-block px-2 py-1 bg-slate-700 rounded text-xs text-slate-300">Leadership: Assistant Head Girl</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certifications -->
+                <div>
+                    <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+                        <i data-lucide="award" class="text-cyan-400"></i> Certifications
+                    </h2>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4 bg-slate-800/50 p-4 rounded-lg border border-slate-700">
+                            <div class="bg-indigo-500/20 p-2 rounded text-indigo-400"><i data-lucide="code-2"></i></div>
+                            <div>
+                                <h4 class="font-bold text-white">DevOps Engineering Scholar</h4>
+                                <p class="text-sm text-slate-400">DevCareer Foundation (2024)</p>
+                                <p class="text-xs text-slate-500 mt-1">Linux, Git, Docker, CI/CD, Cloud Infrastructure</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4 bg-slate-800/50 p-4 rounded-lg border border-slate-700">
+                            <div class="bg-cyan-500/20 p-2 rounded text-cyan-400"><i data-lucide="cloud-cog"></i></div>
+                            <div>
+                                <h4 class="font-bold text-white">DevOps Engineering Scholar</h4>
+                                <p class="text-sm text-slate-400">SheCodeAfrica (2024)</p>
+                                <p class="text-xs text-slate-500 mt-1">Cloud-native engineering & Technical Leadership</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 bg-slate-800/50 p-4 rounded-lg border border-slate-700 relative overflow-hidden">
+                            <div class="absolute top-0 right-0 bg-amber-500 text-white text-[10px] px-2 py-0.5 rounded-bl">IN PROGRESS</div>
+                            <div class="bg-rose-500/20 p-2 rounded text-rose-400"><i data-lucide="shield"></i></div>
+                            <div>
+                                <h4 class="font-bold text-white">ISC2 Certified in Cybersecurity (CC)</h4>
+                                <p class="text-sm text-slate-400">Target: July 2026</p>
+                                <p class="text-xs text-slate-500 mt-1">Network Security, Risk Management, Incident Response</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 bg-slate-800/50 p-4 rounded-lg border border-slate-700 relative overflow-hidden">
+                            <div class="absolute top-0 right-0 bg-amber-500 text-white text-[10px] px-2 py-0.5 rounded-bl">IN PROGRESS</div>
+                            <div class="bg-blue-500/20 p-2 rounded text-blue-400"><i data-lucide="layout"></i></div>
+                            <div>
+                                <h4 class="font-bold text-white">Google UX Design Certificate</h4>
+                                <p class="text-xs text-slate-500 mt-1">Wireframing, Prototyping, Usability Testing</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Footer -->
+    <footer id="contact" class="bg-slate-950 border-t border-slate-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-indigo-900/50 to-slate-900 rounded-2xl p-8 md:p-12 mb-12 border border-indigo-500/30 flex flex-col md:flex-row items-center justify-between gap-8">
+                <div>
+                    <h2 class="text-3xl font-bold text-white mb-2">Ready to elevate your operations?</h2>
+                    <p class="text-slate-400">Open to remote roles, Big 4 internship tracks (2027), and relocation.</p>
+                </div>
+                <a href="mailto:steveenyindiya@gmail.com" class="px-8 py-4 bg-white text-slate-900 hover:bg-cyan-50 rounded-lg font-bold transition-colors shadow-xl whitespace-nowrap">
+                    Let's Talk
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 text-center md:text-left">
+                <div>
+                    <h4 class="text-white font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-slate-400">
+                        <li class="flex items-center justify-center md:justify-start gap-2 hover:text-cyan-400 transition-colors">
+                            <i data-lucide="mail" class="w-4 h-4"></i>
+                            <a href="mailto:steveenyindiya@gmail.com">steveenyindiya@gmail.com</a>
+                        </li>
+                        <li class="flex items-center justify-center md:justify-start gap-2 hover:text-cyan-400 transition-colors">
+                            <i data-lucide="phone" class="w-4 h-4"></i>
+                            <span>08103904951</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Links</h4>
+                    <ul class="space-y-2 text-slate-400">
+                        <li class="hover:text-cyan-400 transition-colors"><a href="#" target="_blank">LinkedIn Profile</a></li>
+                        <li class="hover:text-cyan-400 transition-colors"><a href="https://www.wattpad.com" target="_blank">Published Works (Wattpad)</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Location</h4>
+                    <p class="text-slate-400">Nigeria</p>
+                    <p class="text-indigo-400 text-sm mt-1">Open to Remote & Relocation</p>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-800 pt-8 text-center text-slate-500 text-sm">
+                <p>&copy; 2024 Steve Nancy Enyindiya. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+```
